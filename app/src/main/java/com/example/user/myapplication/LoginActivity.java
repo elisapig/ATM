@@ -19,13 +19,16 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         String userid = ((EditText)findViewById(R.id.ed_userid)).getText().toString();
         String passwd = ((EditText)findViewById(R.id.ed_passwd)).getText().toString();
-        if("jack".equals(userid)&&"1234".equals(passwd)) {
+        if("Elisa".equals(userid)&&"1234".equals(passwd)) {
             getSharedPreferences("atm", MODE_PRIVATE)
                     .edit()
                     .putString("USERID", userid)
                     .apply();
+            setResult(RESULT_OK);
             finish();
-
+        }else {
+            setResult(RESULT_CANCELED);
+            finish();
         }
     }
 
