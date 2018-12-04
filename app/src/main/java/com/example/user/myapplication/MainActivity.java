@@ -68,7 +68,7 @@ public class MainActivity extends  BaseActivity {
             }
         }
         //data
-       
+
         List<String> fruits = Arrays.asList("水蜜桃","葡萄","芒果");
         ArrayAdapter adapter =
                 new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,fruits);
